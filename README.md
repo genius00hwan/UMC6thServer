@@ -1,0 +1,1 @@
+umc 6th study 8주차
