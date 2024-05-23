@@ -1,6 +1,10 @@
 spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
   datasource:
-    url: jdbc:mysql://localhost:3306/study
+    url: jdbc:mysql://localhost:3306/umcStudy
     username: root
     password: root1234
     driver-class-name: com.mysql.cj.jdbc.Driver

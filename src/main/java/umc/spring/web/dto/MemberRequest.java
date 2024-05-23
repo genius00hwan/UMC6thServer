@@ -5,6 +5,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import lombok.Getter;
+import umc.spring.validation.annotation.ExistFoodType;
 
 public class MemberRequest {
     @Getter
@@ -23,7 +24,7 @@ public class MemberRequest {
         String address;
         @Size(min = 5, max = 12)
         String specAddress;
-
+        @ExistFoodType
         List<Long> preferFoodType;
     }
 }
