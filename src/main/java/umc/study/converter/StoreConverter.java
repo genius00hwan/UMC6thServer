@@ -1,14 +1,14 @@
 package umc.study.converter;
 
 import umc.study.domain.Review;
-import umc.study.web.dto.StoreRequestDTO;
+import umc.study.web.dto.StoreRequestDTO.ReviewDTO;
 import umc.study.web.dto.StoreResponseDTO;
 
 import java.time.LocalDateTime;
 
 public class StoreConverter {
 
-    public static Review toReview(StoreRequestDTO.ReveiwDTO request){
+    public static Review toReview(ReviewDTO request){
         return Review.builder()
                 .title(request.getTitle())
                 .score(request.getScore())

@@ -8,7 +8,7 @@ import umc.study.domain.Review;
 import umc.study.repository.MemberRepository;
 import umc.study.repository.ReviewRepository;
 import umc.study.repository.StoreRepository;
-import umc.study.web.dto.StoreRequestDTO;
+import umc.study.web.dto.StoreRequestDTO.ReviewDTO;
 
 @Service
 @Transactional
@@ -22,7 +22,7 @@ public class StoreCommandServiceImpl implements StoreCommandService{
     private final StoreRepository storeRepository;
 
     @Override
-    public Review createReview(Long memberId, Long storeId, StoreRequestDTO.ReveiwDTO request) {
+    public Review createReview(Long memberId, Long storeId, ReviewDTO request) {
 
         Review review = StoreConverter.toReview(request);
 
