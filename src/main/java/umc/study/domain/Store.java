@@ -26,6 +26,7 @@ public class Store extends BaseEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "region_id")
+    @Setter
     private Region region;
 
     @OneToMany(mappedBy = "store", cascade = CascadeType.ALL)

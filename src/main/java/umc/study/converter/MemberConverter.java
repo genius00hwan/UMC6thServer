@@ -2,6 +2,7 @@ package umc.study.converter;
 
 import umc.study.domain.Member;
 import umc.study.domain.enums.Gender;
+import umc.study.domain.mapping.MemberMission;
 import umc.study.web.dto.MemberRequestDTO;
 import umc.study.web.dto.MemberResponseDTO;
 
@@ -39,6 +40,13 @@ public class MemberConverter {
                 .gender(gender)
                 .name(request.getName())
                 .memberPreferList(new ArrayList<>())
+                .build();
+    }
+
+    public static MemberResponseDTO.MemberCompleteMissionDto completeMissionDto(MemberMission memberMission) {
+        return MemberResponseDTO.MemberCompleteMissionDto.builder()
+                .id(memberMission.getId())
+                .status(memberMission.getStatus())
                 .build();
     }
 }
